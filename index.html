@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./fontawesome-free-5.14.0-web/">
         <link rel="stylesheet" href="./style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+        </script>
         <link rel="stylesheet" href="">
     </head>
     <body>
@@ -28,12 +30,22 @@
           </div>
           <div class="col-md-2">
             <!-- flexbox -->
-            <div class="d-flex flex-row">
-              <div class="">1</div>
-              <div class="">2</div>
-              <div class="">3</div>
-              <div class="">3</div>
-              <div class="">3</div>
+            <div class="d-flex flex-row justify-content-between p-2">
+              <div class="">
+                <img src="./img/fb.jpg" alt="">
+              </div>
+              <div class="">
+                <img src="./img/IG.png" alt="">
+              </div>
+              <div class="">
+                <img src="./img/IG.png" alt="">
+              </div>
+              <div class="">
+                <img src="./img/twitter.png" alt="">
+              </div>
+              <div class="">
+                <img src="./img/Youtube.png" alt="">
+              </div>
             </div>
           </div>
      
@@ -180,15 +192,62 @@
            </div>
         </div>
 
+        <div class="d-flex flex-row mb-3 justify-content-between">
+          <div class="p-2">
+            <ul class="pagination">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">
+                <img src="./img/black-arrow.png" alt="">
+              </a></li>
+            </ul>
+          </div>
+          <div class="p-2 bd-highlight invisible">Flex item 2</div>
+          <div class="p-2 bd-highlight">Page 1 of 4</div>
+        </div>
+       
 
+       
       </div>
     </div>
 
-
-    <div class="col">
+   <div class="col">
       2 of 2
     </div>
   </div>
+
+  <!-- Pagination -->
+  <div style="background-color: #2E8C2C;" class="container">
+    <div class="d-flex flex-column bd-highlight mb-3">
+      <div class="p-2 bd-highlight">
+        <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
+        <div class="p-2 bd-highlight">Flex item 1</div>
+        <div class="p-2 bd-highlight">Flex item 2</div>
+        <div class="p-2 bd-highlight">Flex item 3</div>
+        <div class="p-2 bd-highlight">Flex item 3</div>
+      </div>
+    </div>
+      <div class="p-2 bd-highlight">
+        <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+          <div class="p-2 bd-highlight">Flex item 3</div>
+        </div>
+      </div>
+      <div class="p-2 bd-highlight">
+        <div class="d-flex flex-row bd-highlight mb-3 justify-content-between">
+          <div class="p-2 bd-highlight">Flex item 1</div>
+          <div class="p-2 bd-highlight">Flex item 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer container -->
+        </div>
+    
+
 
 
         <!-- Container -->
@@ -196,11 +255,35 @@
     
     
 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      
-      <script src="assets/js/bootstrap.js"></script>
+      <script>
+        $(document).ready(function(){
+          // Activate Carousel
+          $("#myCarousel").carousel();
+            
+          // Enable Carousel Indicators
+          $(".item1").click(function(){
+            $("#myCarousel").carousel(0);
+          });
+          $(".item2").click(function(){
+            $("#myCarousel").carousel(1);
+          });
+          $(".item3").click(function(){
+            $("#myCarousel").carousel(2);
+          });
+          $(".item4").click(function(){
+            $("#myCarousel").carousel(3);
+          });
+            
+          // Enable Carousel Controls
+          $(".left").click(function(){
+            $("#myCarousel").carousel("prev");
+          });
+          $(".right").click(function(){
+            $("#myCarousel").carousel("next");
+          });
+        });
+        </script>
+        
     
     </body>
 </html>
